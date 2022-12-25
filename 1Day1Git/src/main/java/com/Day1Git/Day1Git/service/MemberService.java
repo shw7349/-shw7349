@@ -3,13 +3,23 @@ package com.Day1Git.Day1Git.service;
 import com.Day1Git.Day1Git.domain.Member;
 import com.Day1Git.Day1Git.repository.MemberRepository;
 import com.Day1Git.Day1Git.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.*;
 
+@Service
+@Component
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    @Autowired
+    public MemberService(MemberRepository memberRepository){
+      this.memberRepository = memberRepository;
+    };
 
     /*
      회원가입

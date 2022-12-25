@@ -11,13 +11,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
-    MemberService memberService = new MemberService();
+    MemberService memberService;
     MemoryMemberRepository memberRepository;
 
     @BeforeEach
     public void beforeEach() {
         memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService();
+        memberService = new MemberService(memberRepository);
     }
 
     @AfterEach
