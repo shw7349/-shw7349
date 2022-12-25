@@ -10,15 +10,19 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.*;
 
-@Service
-@Component
+
 public class MemberService {
 
-    private final MemberRepository memberRepository;
+    private MemberRepository memberRepository;
+
 
     @Autowired
-    public MemberService(MemberRepository memberRepository){
+   public MemberService(MemberRepository memberRepository){
       this.memberRepository = memberRepository;
+    };
+
+    public static void main(String[] args) {
+        MemberService memberService = new MemberService();
     };
 
     /*
