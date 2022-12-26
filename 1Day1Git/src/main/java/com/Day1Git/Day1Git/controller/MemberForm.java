@@ -8,7 +8,7 @@ public class MemberForm {
         return name;
     }
 
-    public void setName() {
+    public void setName(String Name) {
         this.name = name;
     }
 

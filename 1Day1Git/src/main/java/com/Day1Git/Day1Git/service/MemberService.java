@@ -20,7 +20,7 @@ public class MemberService {
    public MemberService(MemberRepository memberRepository){
       this.memberRepository = memberRepository;
     };
-
+     
     public static void main(String[] args) {
         MemberService memberService = new MemberService();
     };
