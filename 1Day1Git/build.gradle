@@ -4,6 +4,9 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
+implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+runtimeOnly 'com.h2database:h2'
+	 
 group = 'com.1Day1Git'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
